@@ -1,0 +1,85 @@
+@import "../../variables.modules";
+
+h1 {
+  font-size: 8rem;
+  text-align: left; /* Ensure left alignment */
+  margin-top: 2rem; /* Adjust the top margin as needed */
+  margin-left: 1rem; /* Adjust the left margin to reduce the space */
+  @media only screen and (min-width: 940px) {
+    font-size: 8rem;
+    text-align: left;
+  }
+}
+
+h2 {
+  font-size: 8rem;
+  text-align: right;
+  @media only screen and (min-width: 940px) {
+    font-size: 8rem;
+    text-align: left;
+  }
+}
+
+.homeContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px; /* Thin line width */
+  height: 100%; /* Full height of the container */
+  background: white; /* Default color */
+  transform: translate(-50%, -50%) rotate(30deg); /* Center and tilt line */
+  transform-origin: center; /* Adjust the point of rotation */
+  z-index: 1; /* Ensure it's behind the image */
+  transition: background-color 400ms; /* Smooth color transition */
+
+  /* Semi-circle */
+  &::after {
+      content: '';
+      position: absolute;
+      width: 300px; /* Increased width of the semi-circle */
+      height: 150px; /* Increased height of the semi-circle */
+      border: 8px solid gray; /* Thicker semi-circle border */
+      border-radius: 150px 150px 0 0;
+      top: 42%; /* Position it relative to the line */
+      left: 50%;
+      transform: translateX(-25%) rotate(90deg); /* Center horizontally and rotate */
+      background: transparent; /* Ensure the background is transparent */
+      border-bottom: none; /* Remove the bottom border */
+    }
+}
+
+img {
+  position: relative;
+  z-index: 2; /* Ensure the image is above the line */
+  max-width: 100%; /* Ensure the image scales correctly */
+  height: auto; /* Maintain aspect ratio */
+  width: 55%;
+  display: block; /* Removes any default margin */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+a {
+  color: $dark;
+  transition: color 200ms ease;
+}
+
+a:hover {
+  color: $lightgray;
+  transition: color 200ms ease;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate(0.0deg) }
+  100% { transform: rotate(0.0deg) }
+}
