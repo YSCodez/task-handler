@@ -1,6 +1,6 @@
 @import "../../variables.modules";
 
-h1 {
+.title {
   font-size: 8rem;
   text-align: left; /* Ensure left alignment */
   margin-top: 2rem; /* Adjust the top margin as needed */
@@ -31,7 +31,7 @@ h2 {
   left: 50%;
   width: 2px; /* Thin line width */
   height: 100%; /* Full height of the container */
-  background: white; /* Default color */
+  background: white;
   transform: translate(-50%, -50%) rotate(30deg); /* Center and tilt line */
   transform-origin: center; /* Adjust the point of rotation */
   z-index: 1; /* Ensure it's behind the image */

@@ -29,7 +29,7 @@ export default function Home({ innerRef }) {
 
       <Box>
         <div>
-          <h1>
+          <h1 className={Style.title}>
             <span style={{ background: info.gradient, WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
               {info.ProjfirstName}
             </span>

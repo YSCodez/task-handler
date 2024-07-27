@@ -13,8 +13,8 @@ export default function BaseLayout() {
 
   const [active, setActive] = useState(location.pathname === '/' ? 'home' : location.pathname.slice(1));
   const refHome = useScrollObserver(setActive);
-  const refAbout = useScrollObserver(setActive);
-  const refPortfolio = useScrollObserver(setActive);
+  const refCreate = useScrollObserver(setActive);
+  const refView = useScrollObserver(setActive);
   const [darkMode, setDarkMode] = useState(false);
 
   function handleToggleDarkMode() {
@@ -40,12 +40,12 @@ export default function BaseLayout() {
           <Navbar darkMode={darkMode} handleClick={handleToggleDarkMode} active={active} setActive={setActive} />
         </Grid>
         <Grid item flexGrow={1}>
-          {singlePage ? <SinglePageRoutes refs={{ refHome, refAbout, refPortfolio }} /> : <MultiPageRoutes />}
+          {singlePage ? <SinglePageRoutes refs={{ refHome, refCreate, refView }} /> : <MultiPageRoutes />}
         </Grid>
         <Grid item>
           <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'} py={'1.5rem'} sx={{ opacity: 0.7 }} width={'100%'}>
             <p>
-              Portfolio created with React.js by{' '}
+              Created with React.js by{' '}
               <a href={'https://www.linkedin.com/in/yash-sakhare12/'}>Yash Sakhare</a>
             </p>
             <p>&copy; 2024</p>

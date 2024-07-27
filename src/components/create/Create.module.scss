@@ -1,85 +1,76 @@
 @import "../../variables.modules";
 
-h1 {
-  font-size: 8rem;
-  text-align: left; /* Ensure left alignment */
-  margin-top: 2rem; /* Adjust the top margin as needed */
-  margin-left: 1rem; /* Adjust the left margin to reduce the space */
+.createTitle {
+  font-size: 5rem;
+  text-align: center;
   @media only screen and (min-width: 940px) {
-    font-size: 8rem;
-    text-align: left;
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 4rem;
   }
 }
 
-h2 {
-  font-size: 8rem;
-  text-align: right;
-  @media only screen and (min-width: 940px) {
-    font-size: 8rem;
-    text-align: left;
-  }
+.text {
+  text-align: left; /* Right-align text */
+  font-size: 0.8rem;
+  margin-right: 5%; /* Adjust the margin to ensure proper alignment */
+  margin-bottom: 10px;
+  margin-left: 62%;
+  width: 100%;
+  z-index: 1; /* Ensure it’s below the button */
+  position: relative; /* Ensure relative positioning within container */
 }
 
-.homeContainer {
-  position: relative;
-  overflow: hidden;
+.text h2 {
+  margin-bottom: 10px; /* Space between h2 and h4 */
+  font-size: 2rem;
 }
 
-.line {
+.text h4 {
+  margin-bottom: 10px; /* Space between h2 and h4 */
+  font-size: 1rem;
+}
+
+.subBtn {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 2px; /* Thin line width */
-  height: 100%; /* Full height of the container */
-  background: white; /* Default color */
-  transform: translate(-50%, -50%) rotate(30deg); /* Center and tilt line */
-  transform-origin: center; /* Adjust the point of rotation */
-  z-index: 1; /* Ensure it's behind the image */
-  transition: background-color 400ms; /* Smooth color transition */
-
-  /* Semi-circle */
-  &::after {
-      content: '';
-      position: absolute;
-      width: 300px; /* Increased width of the semi-circle */
-      height: 150px; /* Increased height of the semi-circle */
-      border: 8px solid gray; /* Thicker semi-circle border */
-      border-radius: 150px 150px 0 0;
-      top: 42%; /* Position it relative to the line */
-      left: 50%;
-      transform: translateX(-25%) rotate(90deg); /* Center horizontally and rotate */
-      background: transparent; /* Ensure the background is transparent */
-      border-bottom: none; /* Remove the bottom border */
-    }
+  bottom: 5%; /* Aligns the button to the bottom */
+  right: 23%; /* Aligns the button to the right */
+  font-size: 1rem; /* Adjust as needed */
+  padding: 10px 20px; /* Adjust button padding */
+  display: flex; /* Ensures the button content is flexed */
+  align-items: center; /* Center-aligns content vertically */
+  justify-content: center; /* Center-aligns content horizontally */
+  z-index: 3; /* Ensure the button is above other content */
 }
 
-img {
+.rectangle {
   position: relative;
-  z-index: 2; /* Ensure the image is above the line */
-  max-width: 100%; /* Ensure the image scales correctly */
-  height: auto; /* Maintain aspect ratio */
-  width: 55%;
-  display: block; /* Removes any default margin */
-  margin: 0 auto; /* Centers the image horizontally */
+  width: 900px;
+  height: 400px;
+  background: linear-gradient(135deg, #7289DA 0%, #A27DDC 100%);
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-a {
-  color: $dark;
-  transition: color 200ms ease;
-}
-
-a:hover {
-  color: $lightgray;
-  transition: color 200ms ease;
-}
-
-@keyframes wave {
-  0% { transform: rotate(0.0deg) }
-  10% { transform: rotate(14.0deg) }
-  20% { transform: rotate(-8.0deg) }
-  30% { transform: rotate(14.0deg) }
-  40% { transform: rotate(-4.0deg) }
-  50% { transform: rotate(10.0deg) }
-  60% { transform: rotate(0.0deg) }
-  100% { transform: rotate(0.0deg) }
+.formMsg {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 500px;
+  height: 85%;
+  background-color: #D1D1D1;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 16px;
+  resize: none;
+  overflow-y: auto;
 }
