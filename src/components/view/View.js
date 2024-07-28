@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Box, List, ListItem, ListItemText, Checkbox, IconButton, TextField, Button } from '@mui/material';
+import { Box, List, ListItem, ListItemText, Checkbox, IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Style from './View.module.scss';
 
