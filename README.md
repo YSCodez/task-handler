@@ -4,7 +4,7 @@
 
 This is a task management application built using the MERN stack.
 
-![Application Screenshot](../src/img/homepage.png)
+![Application Screenshot](https://github.com/YSCodez/task-handler/raw/main/src/img/homepage.png)
 
 ## Features
 
