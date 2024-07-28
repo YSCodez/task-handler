@@ -4,7 +4,7 @@
 
 This is a task management application built using the MERN stack.
 
-![Application Screenshot](src/img/screenshot.png)
+![Application Screenshot](./src/img/screenshot.png)
 
 ## Features
 
