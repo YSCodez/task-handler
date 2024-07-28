@@ -11,58 +11,52 @@
 }
 
 .text {
-  text-align: left; /* Right-align text */
+  text-align: left;
   font-size: 0.8rem;
-  margin-right: 5%; /* Adjust the margin to ensure proper alignment */
+  margin-right: 5%;
   margin-bottom: 10px;
-  margin-left: 62%;
   width: 100%;
-  z-index: 1; /* Ensure it’s below the button */
-  position: relative; /* Ensure relative positioning within container */
+  z-index: 1;
+  position: relative;
 }
 
 .text h2 {
-  margin-bottom: 10px; /* Space between h2 and h4 */
+  margin-bottom: 10px;
   font-size: 2rem;
 }
 
 .text h4 {
-  margin-bottom: 10px; /* Space between h2 and h4 */
+  margin-bottom: 10px;
   font-size: 1rem;
 }
 
 .subBtn {
-  position: absolute;
-  bottom: 5%; /* Aligns the button to the bottom */
-  right: 23%; /* Aligns the button to the right */
-  font-size: 1rem; /* Adjust as needed */
-  padding: 10px 20px; /* Adjust button padding */
-  display: flex; /* Ensures the button content is flexed */
-  align-items: center; /* Center-aligns content vertically */
-  justify-content: center; /* Center-aligns content horizontally */
-  z-index: 3; /* Ensure the button is above other content */
+  font-size: 1rem;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
 }
 
 .rectangle {
   position: relative;
   width: 900px;
   height: 400px;
-  background: linear-gradient(135deg, #7289DA 0%, #A27DDC 100%);
+  background: linear-gradient(135deg, rgba(227, 16, 100, 1) 0%, rgba(255, 255, 255, 1) 100%);
   border-radius: 20px;
   border: 2px solid #ccc;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 20px;
 }
 
 .formMsg {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  width: 500px;
-  height: 85%;
-  background-color: #D1D1D1;
+  width: 48%;
+  height: calc(100% - 40px);
+  background-color: rgba(245, 245, 245, 0.6);
   border-radius: 10px;
   border: 2px solid #ccc;
   padding: 10px;

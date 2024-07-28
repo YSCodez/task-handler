@@ -26,7 +26,6 @@ export default function Home({ innerRef }) {
       }}
       className={Style.homeContainer}
     >
-
       <Box>
         <div>
           <h1 className={Style.title}>
