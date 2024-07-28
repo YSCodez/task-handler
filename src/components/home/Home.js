@@ -36,7 +36,7 @@ export default function Home({ innerRef }) {
           </h1>
         </div>
         <div className={Style.line}></div>
-        <img src={info.centreimg} alt="Center Image" /> {/* Add alt text for accessibility */}
+        <img src={info.centreimg} alt="Task List" />
         <h2>{info.ProjlastName}</h2>
       </Box>
     </Box>
